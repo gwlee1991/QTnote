@@ -8,7 +8,7 @@ require("./models/User");
 require("./services/passport");
 
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://localhost/nevernote");
+mongoose.connect(keys.mongoURI);
 
 const app = express();
 
