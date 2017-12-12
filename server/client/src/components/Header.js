@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import styles from '../css/header.css.js';
+import '../css/header.css';
 
 class Header extends Component {
   renderContent(){
@@ -16,14 +16,18 @@ class Header extends Component {
   
   render(){
     return(
-      <nav style={styles.nav}>
+      <nav className="nav">
         <div className="nav-wrapper">
-          <Link to={this.props.auth ? '/main' : '/' } className="logo">
-            Nevernote
-          </Link>
-          <ul className="nav-right">
-            {this.renderContent()}
-          </ul>
+          <div className="nav-items nav-right">
+            <Link to={this.props.auth ? '/main' : '/' } className="logo">
+              Nevernote
+            </Link>
+          </div>
+          <div className="nav-items nav-left">
+            <ul className="session-buttons">
+              {this.renderContent()}
+            </ul>
+          </div>
         </div>
       </nav>
     )
