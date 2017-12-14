@@ -7,8 +7,7 @@ class Intro extends Component {
     super(props);
     this.state = {
       renderImage: null,
-      fontSize: undefined,
-      imageContainer: null,
+      fontSize: undefined
     };
   }
   componentDidMount(){
