@@ -69,14 +69,14 @@ class Intro extends Component {
             </h4>
           </div>
           <div className="intro-txt-create-profile-btn-container">
-            <button>
+            <button className="create-account-bttn">
               <a href="/auth/google">Create your free account</a>
             </button>
           </div>
         </div>
-          { this.state.renderImage ? <div className="intro-image-container">
-            <img alt="note" className="intro-image" src="http://res.cloudinary.com/dbtdkqyeo/image/upload/v1513284283/note1_duiiun.jpg" />
-            </div> : ""}
+        {this.state.renderImage ? <div className="intro-image-container">
+            <img alt="note" className="intro-image" src="http://res.cloudinary.com/dbtdkqyeo/image/upload/c_scale,w_448/v1513290464/intro-image_p1aulz.jpg" />
+          </div> : ""}
       </div>;
   }
 }
