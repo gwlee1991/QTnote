@@ -3,7 +3,11 @@ const { Schema } = mongoose;
 // same of Schema = mongoose.Schema;
 
 const userSchema = new Schema({
-  googleId: String
+  googleId: String,
+  email: String,
+  password: String
 });
+
+
 
 mongoose.model('users', userSchema);
