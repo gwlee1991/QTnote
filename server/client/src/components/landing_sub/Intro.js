@@ -6,10 +6,24 @@ class Intro extends Component {
   constructor(props){
     super(props);
     this.state = {
-      renderImage: null
+      renderImage: null,
+      fontSize: undefined,
+      imageContainer: null,
     };
   }
   componentDidMount(){
+    window.addEventListener("load", (e) => {
+      e.preventDefault();
+      let container = document.querySelector('div.intro-container');
+      if (container.clientWidth < 800) {
+        this.setState({ renderImage: false })
+      } else {
+        this.setState({ renderImage: true })
+      }
+
+
+    })
+
     window.addEventListener("resize", (e) => {
       e.preventDefault();
       let container = document.querySelector('div.intro-container');
@@ -25,7 +39,7 @@ class Intro extends Component {
     return <div className="intro-container">
         <div className="intro-txt-container">
           <div className="intro-txt-heading">
-            <h2>Meet Nevernote, your third brain</h2>
+            <h2>Meet Nevernote, your third brain.</h2>
           </div>
           <div className="intro-txt-subheading">
             <h4>
@@ -39,9 +53,9 @@ class Intro extends Component {
             </button>
           </div>
         </div>
-        <div className="intro-image-container">
-          { this.state.renderImage ? <img alt="note" src="http://res.cloudinary.com/dbtdkqyeo/image/upload/v1513284283/note1_duiiun.jpg" /> : ""}
-        </div>
+          { this.state.renderImage ? <div className="intro-image-container">
+            <img alt="note" className="intro-image" src="http://res.cloudinary.com/dbtdkqyeo/image/upload/v1513284283/note1_duiiun.jpg" />
+            </div> : ""}
       </div>;
   }
 }
