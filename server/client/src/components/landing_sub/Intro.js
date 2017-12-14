@@ -16,11 +16,21 @@ class Intro extends Component {
       e.preventDefault();
       let container = document.querySelector('div.intro-container');
       if (container.clientWidth < 800) {
-        this.setState({ renderImage: false })
+        this.setState({ renderImage: false });
       } else {
-        this.setState({ renderImage: true })
+        this.setState({ renderImage: true });
       }
 
+      let heading = document.querySelector('h2');
+      if (container.clientWidth < 500) {
+        this.setState({ fontSize: "30px" }, () => {
+          heading.style.fontSize = this.state.fontSize
+        });
+      } else {
+        this.setState({ fontSize: "46px"}, () => {
+          heading.style.fontSize = this.state.fontSize
+        });
+      }
 
     })
 
@@ -31,6 +41,17 @@ class Intro extends Component {
         this.setState({ renderImage: false })
       } else {
         this.setState({ renderImage: true })
+      }
+
+      let heading = document.querySelector('h2');
+      if (container.clientWidth < 500) {
+        this.setState({ fontSize: "30px"}, () => {
+          heading.style.fontSize = this.state.fontSize
+        });
+      } else {
+        this.setState({ fontSize: "46px"}, () => {
+          heading.style.fontSize = this.state.fontSize
+        });
       }
     })
   }
