@@ -14,7 +14,39 @@
 .nav-items {
   margin: 20px;
   padding: 20px;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
+.logo {
+  display: flex;
+  flex-direction: row;
+  color: green;
+  font-size: 20px;
+}
+.logo-img-container {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-img {
+  height: 100%;
+  width: 100%;
+}
+
+.logo-txt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bttn-signin {
+  font-weight: 100;
+}
+
+.bttn-signin:hover {
+  color: green;
+}
