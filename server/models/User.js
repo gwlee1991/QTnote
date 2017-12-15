@@ -3,7 +3,7 @@ const { Schema } = mongoose;
 // same of Schema = mongoose.Schema;
 
 const userSchema = new Schema({
-  googleId: String,
+  googleId: {type: String},
 });
 
 
