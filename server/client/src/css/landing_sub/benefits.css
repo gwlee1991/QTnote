@@ -1,3 +1,41 @@
 .benefits-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+.benefits-image-container {
+  max-height: 300px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.benefits-txt-container {
+  flex: 1;
+  max-width: 460px;
+}
+
+.benefits-image {
+  height: auto;
+  border-radius: 350px;
+}
+
+.benefits-txt-body {
+  padding-bottom: 10px;
+}
+
+.create-account-link {
+  border-bottom: solid 2px green;
+  font-size: 13px;
+  line-height: 21px;
+}
+
+.create-account-link:hover {
+  color: green;
 }
