@@ -3,6 +3,29 @@ import '../../css/landing_sub/socialproof.css';
 
 
 class SocialProof extends Component {
+  componentDidMount(){
+    let spContainer = document.querySelector('.sp-container');
+    window.addEventListener("onload",(e) => {
+      e.preventDefault();
+      this.setPadding(spContainer);
+    })
+
+    window.addEventListener("resize", (e) => {
+      e.preventDefault();
+      this.setPadding(spContainer);
+    })
+  }
+
+  setPadding(element){
+    if (window.innerWidth < 600) {
+      element.style.paddingTop = "0px";
+      element.style.paddingBottom = "50px";
+    } else {
+      element.style.paddingTop = "30px";
+      element.style.paddingBottom = "80px";
+    }
+  }
+  
   render(){
     return <div className="sp-container">
         <div className="sp-heading">
