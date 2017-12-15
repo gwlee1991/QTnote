@@ -10,6 +10,7 @@ class Language extends Component {
       language: "English (US)"
     };
     this.toggleShowOptions = this.toggleShowOptions.bind(this);
+    this.setLanguage = this.setLanguage.bind(this);
   }
 
   toggleShowOptions(){
@@ -22,11 +23,19 @@ class Language extends Component {
       <div className="language-selection-container">
         <ul>
         {languages.map(language => (
-          <li className="language-option" key={languages.indexOf(language)}>{language}</li>
+          <li onClick={(e) => this.setLanguage(e)} className="language-option" key={languages.indexOf(language)}>{language}</li>
         ))}
         </ul>
       </div>
     )
+  }
+
+  setLanguage(e){
+    let languageTag = e.target;
+    console.log(languageTag);
+    this.setState({
+      language: languageTag.innerHTML
+    })
   }
   
   render(){
