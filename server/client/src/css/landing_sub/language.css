@@ -1,0 +1,27 @@
+.language-container {
+  padding: 40px;
+}
+
+.language-selection:hover {
+  color: green;
+  cursor: pointer;
+}
+
+.language-selection-container {
+  position: absolute;
+  left: 40px;
+  width: 430px;
+  margin-bottom: 8px;
+  padding: 10px 0;
+}
+
+.language-option {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.language-option:hover {
+  color: green;
+  cursor: pointer;
+}

@@ -1,0 +1,12 @@
+.sp-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(245, 245, 245);
+  padding-bottom: 50px;
+}
+
+.sp-heading {
+  max-width: 410px;
+}
