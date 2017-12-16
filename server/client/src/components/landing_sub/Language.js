@@ -32,10 +32,10 @@ class Language extends Component {
 
   setLanguage(e){
     let languageTag = e.target;
-    console.log(languageTag);
     this.setState({
       language: languageTag.innerHTML
-    })
+    });
+    this.toggleShowOptions();
   }
   
   render(){
