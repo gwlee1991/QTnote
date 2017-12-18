@@ -8,10 +8,10 @@ import reducers from './reducers/index';
 import App from "./components/App";
 
 const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
-
+const root = document.getElementById('root');
 ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
-  document.querySelector("#root")
+  root
 );
