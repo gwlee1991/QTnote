@@ -11,8 +11,7 @@ const notebookSchema = new Schema({
     ref: 'notes'
   }],
   title: {
-    type: String,
-    unique: true
+    type: String
   }
 });
 

@@ -11,7 +11,6 @@ module.exports = {
 
   createNotes(req, res, next) {
     const noteProps = req.body;
-
     Note.create(noteProps)
       .then(note => res.send(note))
       .catch(next);
