@@ -10,10 +10,12 @@ module.exports = {
   },
 
   createNotebooks(req, res, next) {
+    console.log(req.body);
     const notebookProps = req.body;
-
     Notebook.create(notebookProps)
-      .then(notebook => res.send(notebookProps))
+      .then(notebook => {
+        res.send(notebookProps)
+      })
       .catch(next);
   }
 }

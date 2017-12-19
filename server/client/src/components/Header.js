@@ -7,11 +7,12 @@ class Header extends Component {
     window.addEventListener("resize", (e) => {
       let phrase = document.querySelector('.bttn-signin')
       e.preventDefault();
-      console.log(phrase);
-      if (window.innerWidth > 530) {
-        phrase.innerHTML = "Login with Google";
-      } else {
-        phrase.innerHTML = "";
+      if (phrase) {
+        if (window.innerWidth > 530) {
+          phrase.innerHTML = "Login with Google";
+        } else {
+          phrase.innerHTML = "";
+        }
       }
     })
 

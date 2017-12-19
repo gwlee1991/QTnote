@@ -15,4 +15,6 @@ const notebookSchema = new Schema({
   }
 });
 
-mongoose.model('notesbooks', notebookSchema)
+const Notebook = mongoose.model('Notebook', notebookSchema);
+
+module.exports = Notebook;
